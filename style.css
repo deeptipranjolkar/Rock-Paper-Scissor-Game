@@ -1,0 +1,775 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ADE792;
+  
+}
+
+.game_name {
+    position: absolute;
+    width: 135px;
+    height: 37px;
+    left: 18px;
+    top: 16px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.game_score {
+    position: absolute;
+    width: 800px;
+    height: 180px;
+    left: 240px;
+    top: 62px;
+    border: 2px solid #FFFFFF;
+    border-radius: 13px;
+}
+
+.computer_score {
+    position: absolute;
+    width: 139px;
+    height: 128px;
+    left: 473px;
+    top: 24px;
+    background: #FFFFFF;
+    border-radius: 9px;
+}
+
+
+.usescore {
+    position: absolute;
+    width: 139px;
+    height: 128px;
+    left: 641px;
+    top: 24px;
+    background: #FFFFFF;
+    border-radius: 9px;
+}
+
+.comptitle {
+    position: absolute;
+    width: 103px;
+    height: 20px;
+    left: 13px;
+    top: 7px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    /* identical to box height */
+    letter-spacing: 0.1em;
+    color: #656565;
+}
+
+.compscore {
+    position: absolute;
+    width: 61px;
+    height: 16px;
+    left: 35px;
+    top: 29px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+
+    color: #656565;
+
+}
+
+#comppoints {
+    position: absolute;
+    width: 79px;
+    height: 63px;
+    left: 28.5px;
+    top: 51px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 80px;
+    text-align: center;
+
+    color: #252525;
+
+}
+
+.youtitle {
+    position: absolute;
+    width: 50px;
+    height: 16px;
+    left: 45px;
+    top: 7px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #656565;
+
+}
+
+.youscore {
+    position: absolute;
+    width: 61px;
+    height: 16px;
+    left: 40px;
+    top: 29px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #656565;
+
+}
+
+#youpoints {
+    position: absolute;
+    width: 79px;
+    height: 63px;
+    left: 32.8px;
+    top: 51px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 80px;
+    text-align: center;
+    color: #252525;
+}
+
+p {
+    left: 264px;
+    position: relative;
+    top: 79px;
+}
+
+.youpicked {
+    position: absolute;
+    width: 113px;
+    height: 16px;
+    left: 323px;
+    top: 344px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.computerpicked {
+    position: absolute;
+    width: 100px;
+    height: 16px;
+    left: 867px;
+    top: 344px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.line1 {
+    position: absolute;
+    width: 229px;
+    height: 0px;
+    left: 548px;
+    top: 370px;
+    border: 12px solid rgba(0, 0, 0, 0.64);
+}
+
+.line2 {
+    position: absolute;
+    width: 230px;
+    height: 0px;
+    left: 590.96px;
+    top: 491px;
+    border: 12px solid rgba(0, 0, 0, 0.64);
+    transform: rotate(130deg);
+
+}
+
+.line3 {
+    position: absolute;
+    width: 164px;
+    height: 0px;
+    left: 512px;
+    top: 462px;
+    border: 12px solid rgba(0, 0, 0, 0.64);
+    transform: rotate(50.58deg);
+}
+
+.rock {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 476px;
+    top: 331px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    place-items: center;
+    border: 12px solid #0074B6;
+    filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+    box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.paper {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 602px;
+    top: 501px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    /* place-items: center; */
+    border: 12px solid #FFA943;
+    filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+    box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.sci {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 733px;
+    top: 325px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    /* place-items: center; */
+    border: 12px solid #BD00FF;
+    filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+    box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#rock {
+    left: 1px;
+    position: relative;
+    top: 8px;
+}
+
+#paper {
+    left: 7px;
+    position: relative;
+    top: 5px;
+}
+
+#sci {
+    left: 25px;
+    position: relative;
+    top: 10px;
+    transform: rotate(5.27deg);
+}
+
+.youpicked,
+.computerpicked {
+    opacity: 0;
+}
+
+#BR {
+    position: absolute;
+    width: 72px;
+    height: 20px;
+    left: 21px;
+    top: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    color: #FFFFFF
+}
+
+.BD {
+    box-sizing: border-box;
+    position: absolute;
+    width: 119px;
+    height: 40px;
+    left: 1159px;
+    top: 589px;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+.computer {
+    display: none;
+}
+
+#box {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 278px;
+    height: 325px;
+    left: 988px;
+    top: 256px;
+}
+
+#box {
+    display: none;
+}
+
+#BR:hover+#box {
+    display: block;
+}
+
+#cls {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 250px;
+    top: -21px;
+    background: #FF0000;
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cross {
+    position: absolute;
+    width: 24px;
+    height: 53px;
+    left: 9px;
+    top: -19px;
+    font-family: 'Dangrek';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 79px;
+    color: #FFFFFF;
+
+}
+
+.winner {
+    position: absolute;
+    width: 168px;
+    height: 31px;
+    left: 573px;
+    top: 426px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.computerlost {
+    position: absolute;
+    width: 168px;
+    height: 31px;
+    left: 573px;
+    top: 459px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+
+}
+
+.playagain {
+    position: absolute;
+    width: 155px;
+    height: 44px;
+    left: 577px;
+    top: 500px;
+    background: #FFFFFF;
+    border-radius: 9px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: #6B6B6B;
+    border: none;
+    cursor: pointer;
+}
+
+.win {
+    display: none;
+}
+
+.show {
+    left: 321px;
+    top: 400px;
+}
+
+.right {
+    left: 859px;
+    top: 400px;
+}
+
+.tie1 {
+    position: absolute;
+    left: 573px;
+    top: 426px;
+    width: 209px;
+    height: 36px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 39px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: #FFFFFF;
+}
+
+.replay {
+    position: absolute;
+    width: 155px;
+    height: 44px;
+    left: 597px;
+    top: 500px;
+    background: #FFFFFF;
+    border-radius: 9px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    color: #6B6B6B;
+    border: none;
+    cursor: pointer;
+}
+
+.tie0 {
+    display: none;
+}
+
+.cir1 {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 201px;
+    top: 277px;
+    opacity: 0;
+}
+
+.cir2 {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    left: 221px;
+    top: 295px;
+    opacity: 0;
+}
+
+.cir3 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 251px;
+    top: 326px;
+    opacity: 0;
+}
+
+.cir4 {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 740px;
+    top: 277px;
+    opacity: 0;
+}
+
+.cir5 {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    left: 761px;
+    top: 295px;
+    opacity: 0;
+}
+
+.cir6 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 791px;
+    top: 326px;
+    opacity: 0;
+}
+
+.hurray {
+    position: absolute;
+    width: 464px;
+    height: 86px;
+    left: 436px;
+    top: 363px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 85px;
+    line-height: 107px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.won {
+    position: absolute;
+    width: 457px;
+    height: 48px;
+    left: 454px;
+    top: 475px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 37px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.pagain {
+
+    position: absolute;
+    width: 155px;
+    height: 44px;
+    left: 577px;
+    top: 558px;
+    background: #FFFFFF;
+    border-radius: 9px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 45px;
+    letter-spacing: 0.1em;
+    color: #6B6B6B;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.brs {
+    box-sizing: border-box;
+    position: absolute;
+    width: 119px;
+    height: 40px;
+    left: 1155px;
+    top: 589px;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+#cup {
+    position: absolute;
+    left: 566px;
+    top: 167px;
+}
+
+#star1 {
+    position: absolute;
+    width: 115px;
+    height: 115px;
+    left: 388px;
+    top: 156px;
+}
+
+#star2 {
+    position: absolute;
+    width: 103px;
+    height: 103px;
+    left: 721px;
+    top: 57px;
+
+}
+
+#star3 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 511px;
+    top: 49px;
+
+}
+
+#star4 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 615px;
+    top: 104px;
+}
+
+#star5 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 496px;
+    top: 319px;
+}
+
+#star6 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 788px;
+    top: 213px;
+}
+
+#star7 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 852px;
+    top: 152px;
+}
+
+
+
+#BR1 {
+    position: absolute;
+    width: 72px;
+    height: 20px;
+    left: 19px;
+    top: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    color: #FFFFFF
+}
+
+.BD1 {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 119px;
+    height: 40px;
+    left: 1024px;
+    top: 589px;
+
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+#box1 {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 278px;
+    height: 325px;
+    left: 860px;
+    top: 252px;
+}
+
+#box1 {
+    display: none;
+}
+
+#BR1:hover+#box {
+    display: block;
+}
+
+#cls1 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 250px;
+    top: -21px;
+    background: #FF0000;
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cross1 {
+    position: absolute;
+    width: 24px;
+    height: 53px;
+    left: 9px;
+    top: -19px;
+    font-family: 'Dangrek';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 79px;
+    color: #FFFFFF;
+
+}
+
+.BD1 {
+    display: none;
+}
+
+#nextpage {
+    position: absolute;
+    width: 72px;
+    height: 20px;
+    left: 21px;
+    top: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    color: #FFFFFF
+}
+
+.ND {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 119px;
+    height: 40px;
+    left: 1159px;
+    top: 589px;
+
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+.ND {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>rock-paper-scissor</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="game_name">
+            <p>ROCK</p>
+            <p>PAPER</p>
+            <p>SCISSOR</p>
+            <div class="game_score">
+                <div class="computer_score">
+                    <p class="comptitle">COMPUTER</p>
+                    <p class="compscore">SCORE</p>
+                    <span id="comppoints">0</span>
+                </div>
+                <div class="usescore">
+                    <p class="youtitle">YOUR</p>
+                    <p class="youscore">SCORE</p>
+                    <span id="youpoints">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-container">
+
+        <div class="game-options">
+            <div class="lines">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="ripple1">
+                <img src="./Ellipse.png" alt="circle" class="cir1">
+                <img src="./Ellipse.png" alt="circle" class="cir2">
+                <img src="./Ellipse.png" alt="circle" class="cir3">
+            </div>
+            <div class="ripple2">
+                <img src="./Ellipse.png" alt="circle" class="cir4">
+                <img src="./Ellipse.png" alt="circle" class="cir5">
+                <img src="./Ellipse.png" alt="circle" class="cir6">
+            </div>
+            <div class="picked_info">
+                <p class="youpicked">YOU PICKED</p>
+                <p class="computerpicked">COMPUTER PICKED</p>
+            </div>
+            <div class="rock ply">
+                <div class="item">
+                    <img src="./icons8-fist-67 1.png" alt="rock" id="rock">
+                </div>
+            </div>
+            <div class="paper ply">
+                <div class="item">
+                    <img src="./icons8-hand-64 1.png" alt="paper" id="paper">
+                </div>
+            </div>
+            <div class="sci ply">
+                <div class="item">
+                    <img src="./17911 1.png" alt="scissor" id="sci">
+                </div>
+            </div>
+            <div class="rock computer">
+                <div class="item">
+                    <img src="./icons8-fist-67 1.png" alt="rock" id="rock">
+                </div>
+            </div>
+            <div class="paper computer">
+                <div class="item">
+                    <img src="./icons8-hand-64 1.png" alt="paper" id="paper">
+                </div>
+            </div>
+            <div class="sci computer">
+                <div class="item">
+                    <img src="./17911 1.png" alt="scissor" id="sci">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="BD">
+        <p id="BR">RULES</p>
+    </div>
+    <div class="ND">
+        <!-- <p id="nextrule">NEXT</p> -->
+        <a href="index2.html" id="nextpage">NEXT</a>
+    </div>
+
+    <div id="box">
+        <img src="./Frame 4.png" alt="gamerules">
+        <div id="cls">
+            <p class="cross">X</p>
+        </div>
+    </div>
+    <!-- rules for win page -->
+    <div class="BD1">
+        <p id="BR1">RULES</p>
+    </div>
+
+    <div id="box1">
+        <img src="./Frame 4.png" alt="gamerules">
+        <div id="cls1">
+            <p class="cross1">X</p>
+        </div>
+    </div>
+    <!-- end of rules -->
+    <div class="win">
+        <p class="winner">YOU WIN</p>
+        <p class="computerlost">AGAINST PC</p>
+        <button class="playagain">PLAY AGAIN</button>
+    </div>
+    <div class="tie0">
+        <p class="tie1">TIE UP</p>
+        <button class="replay">REPLAY</button>
+    </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
